@@ -9,22 +9,22 @@ from datetime import timedelta, date
 from datetime import datetime
 from bs4 import BeautifulSoup
 
-aditmadzs = LineClient(authToken='Evftok6ZXZBCXVQnHV35.H0P1aSaOLRlTUZrfWMfDnq.6yer+if0CdeP+MkmELjZ+KtL7kHf75VsWRwEnDMgWCI=')
+aditmadzs = LineClient(authToken='TOKEN LU')
 aditmadzs.log("Auth Token : " + str(aditmadzs.authToken))
 channel = LineChannel(aditmadzs)
 aditmadzs.log("Channel Access Token : " + str(channel.channelAccessToken))
 
-ki = LineClient(authToken='Evftok6ZXZBCXVQnHV35.H0P1aSaOLRlTUZrfWMfDnq.6yer+if0CdeP+MkmELjZ+KtL7kHf75VsWRwEnDMgWCI=')
+ki = LineClient(authToken='TOKEN LU')
 ki.log("Auth Token : " + str(ki.authToken))
 channel1 = LineChannel(ki)
 ki.log("Channel Access Token : " + str(channel1.channelAccessToken))
 
-kk = LineClient(authToken='Evftok6ZXZBCXVQnHV35.H0P1aSaOLRlTUZrfWMfDnq.6yer+if0CdeP+MkmELjZ+KtL7kHf75VsWRwEnDMgWCI=')
+kk = LineClient(authToken='TOKEN LU')
 kk.log("Auth Token : " + str(kk.authToken))
 channel2 = LineChannel(kk)
 kk.log("Channel Access Token : " + str(channel2.channelAccessToken))
 
-kc = LineClient(authToken='Evftok6ZXZBCXVQnHV35.H0P1aSaOLRlTUZrfWMfDnq.6yer+if0CdeP+MkmELjZ+KtL7kHf75VsWRwEnDMgWCI=')
+kc = LineClient(authToken='TOKEN LU')
 kc.log("Auth Token : " + str(kc.authToken))
 channel3 = LineChannel(kc)
 kc.log("Channel Access Token : " + str(channel3.channelAccessToken))
