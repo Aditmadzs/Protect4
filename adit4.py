@@ -194,7 +194,7 @@ def runtime(secs):
 def sendMentionFooter(to, text="", mids=[]):
     arrData = ""
     arr = []
-    mention = "@Meka Finee "
+    mention = "@Aditmadzs "
     if mids == []:
         raise Exception("Invalid mids")
     if "@!" in text:
@@ -263,33 +263,6 @@ def mentionMembers(to, mid,name,url,iconlink):
             else:
                 textx += "\nTotal: {} members".format(str(len(mid)))
         aditmadzs.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}'),'AGENT_NAME': name,'AGENT_LINK': url,'AGENT_ICON': iconlink },0)
-    except Exception as error:
-        aditmadzs.sendMessage(to, "[ INFO ] Error :\n" + str(error))
-
-def siderMembers(to, mid):
-    try:
-        arrData = ""
-        textx = "Total Sider User「{}」\nHaii ".format(str(len(mid)))
-        arr = []
-        no = 1
-        num = 2
-        for i in mid:
-            mention = "@x\n"
-            slen = str(len(textx))
-            elen = str(len(textx) + len(mention) - 1)
-            arrData = {'S':slen, 'E':elen, 'M':i}
-            arr.append(arrData)
-            textx += mention+wait["mention"]
-            if no < len(mid):
-                no += 1
-                textx += "%i. " % (num)
-                num=(num+1)
-            else:
-                try:
-                    no = "\n  ╰══[ {} ]".format(str(aditmadzs.getGroup(to).name))
-                except:
-                    no = "\n  ╰══[ Success ]"
-        aditmadzs.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
     except Exception as error:
         aditmadzs.sendMessage(to, "[ INFO ] Error :\n" + str(error))
 
@@ -419,13 +392,11 @@ def helpcreator():
                   "║»»══════ Help BOT ═══════" + "\n" + \
                   "║»════════════════════════" + "\n" + \
                   "║»»══════ List Menu ══════" + "\n" + \
-                  "║»» " + key + "Cek sider\n" + \
                   "║»» " + key + "Cek spam\n" + \
                   "║»» " + key + "Cek pesan\n" + \
                   "║»» " + key + "Cek respon\n" + \
                   "║»» " + key + "Cek welcome\n" + \
                   "║»» " + key + "Cek leave\n" + \
-                  "║»» " + key + "Set sider:「Text」\n" + \
                   "║»» " + key + "Set spam:「Text」\n" + \
                   "║»» " + key + "Set pesan:「Text」\n" + \
                   "║»» " + key + "Set respon:「Text」\n" + \
@@ -1488,7 +1459,7 @@ def bot(op):
                             if msg._from in admin:
                                 tz = pytz.timezone("Asia/Jakarta")
                                 timeNow = datetime.now(tz=tz)
-                                md = "╭══════════════════ STATUS ═════════════════════\n"
+                                md = "╭═══════════ STATUS ══════════════\n"
                                 if wait["unsend"] == True: md+="║»» ✔️ Unsend「ON」\n"
                                 else: md+="║»» ❌ Unsend「OFF」\n"                                
                                 if wait["Mentionkick"] == True: md+="║»» ✔️ Notag「ON」\n"
@@ -1515,7 +1486,7 @@ def bot(op):
                                 else: md+="║»» ❌ Protectcancel「OFF」\n"
                                 if msg.to in protectinvite: md+="║»» ✔️ Protectinvite「ON」\n"
                                 else: md+="║»» ❌ Protectinvite「OFF」\n"                                
-                                aditmadzs.sendMessage(msg.to, md+"║»»══════════════════════════════\n║»» Tanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n║»» Jam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]\n  ╰═══════════════════════════════")
+                                aditmadzs.sendMessage(msg.to, md+"║»»════════════════════════\n║»» Tanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n║»» Jam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]\n  ╰═════════════════════════")
 
                         elif cmd == "creator" or text.lower() == 'creator':
                             if msg._from in admin:
@@ -2823,15 +2794,6 @@ def bot(op):
                                   Setmain["ADITMADZSmessage"] = spl
                                   aditmadzs.sendMessage(msg.to, "「Spam Msg」\nSpam Msg diganti jadi :\n\n「{}」".format(str(spl)))
 
-                        elif 'Set sider: ' in msg.text:
-                           if msg._from in admin:
-                              spl = msg.text.replace('Set sider: ','')
-                              if spl in [""," ","\n",None]:
-                                  aditmadzs.sendMessage(msg.to, "Gagal mengganti Sider Msg")
-                              else:
-                                  wait["mention"] = spl
-                                  aditmadzs.sendMessage(msg.to, "「Sider Msg」\nSider Msg diganti jadi :\n\n「{}」".format(str(spl)))
-
                         elif text.lower() == "cek pesan":
                             if msg._from in admin:
                                aditmadzs.sendMessage(msg.to, "「Pesan Msg」\nPesan Msg mu :\n\n「 " + str(wait["message"]) + " 」")
@@ -2843,10 +2805,6 @@ def bot(op):
                         elif text.lower() == "cek spam":
                             if msg._from in admin:
                                aditmadzs.sendMessage(msg.to, "「Spam Msg」\nSpam Msg mu :\n\n「 " + str(Setmain["ADITMADZSmessage"]) + " 」")
-
-                        elif text.lower() == "cek sider":
-                            if msg._from in admin:
-                               aditmadzs.sendMessage(msg.to, "「Sider Msg」\nSider Msg mu :\n\n「 " + str(wait["mention"]) + " 」")
 
 #===========JOIN TICKET============#
                         elif "/ti/g/" in msg.text.lower():
