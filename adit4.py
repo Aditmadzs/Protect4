@@ -1181,6 +1181,68 @@ def bot(op):
                 except Exception as e:
                     print(e)
 
+        if op.type == 26 or op.type == 25:
+           if wait["selfbot"] == True:
+               msg = op.message
+               if msg._from not in Bots:
+                 if wait["talkban"] == True:
+                   if msg._from in wait["Talkblacklist"]:
+                      try:
+                          random.choice(ABC).kickoutFromGroup(msg.to, [msg._from])
+                      except:
+                          try:
+                              random.choice(ABC).kickoutFromGroup(msg.to, [msg._from])
+                          except:
+                              random.choice(ABC).kickoutFromGroup(msg.to, [msg._from])
+               if 'MENTION' in msg.contentMetadata.keys() != None:
+                 if wait["detectMention"] == True:
+                   name = re.findall(r'@(\w+)', msg.text)
+                   mention = ast.literal_eval(msg.contentMetadata['MENTION'])
+                   mentionees = mention['MENTIONEES']
+                   for mention in mentionees:
+                        if mention ['M'] in Bots:
+                           cl.sendMessage(msg.to, wait["Respontag"])
+                           cl.sendMessage(msg.to, None, contentMetadata={"STKID":"21715710","STKPKGID":"9662","STKVER":"2"}, contentType=7)
+                           break
+               if 'MENTION' in msg.contentMetadata.keys() != None:
+                 if wait["Mentiongift"] == True:
+                   name = re.findall(r'@(\w+)', msg.text)
+                   mention = ast.literal_eval(msg.contentMetadata['MENTION'])
+                   mentionees = mention['MENTIONEES']
+                   for mention in mentionees:
+                        if mention ['M'] in Bots:
+                           idth = ["a0768339-c2d3-4189-9653-2909e9bb6f58","ec4a14ea-7437-407b-aee7-96b1cbbc1b4b","f35bd31f-5ec7-4b2f-b659-92adf5e3d151","ba1d5150-3b5f-4768-9197-01a3f971aa34","2b4ccc45-7309-47fe-a006-1a1edb846ddb","168d03c3-dbc2-456f-b982-3d6f85f52af2","d4f09a5f-29df-48ac-bca6-a204121ea165","517174f2-1545-43b9-a28f-5777154045a6","762ecc71-7f71-4900-91c9-4b3f213d8b26","2df50b22-112d-4f21-b856-f88df2193f9e"]
+                           plihth = random.choice(idth)
+                           jenis = ["5","6","7","8"]
+                           plihjenis = random.choice(jenis)
+                           cl.sendMessage(msg.to, "Ye ngetag ngetag, lu minta digift ya? cek PersonalChat bos, udah gue gift tuh. Jangan lupa bilang makasih yak!")
+                           cl.sendMessage(msg._from, None, contentMetadata={"PRDID":plihth,"PRDTYPE":"THEME","MSGTPL":plihjenis}, contentType=9)
+                           break                       
+               if 'MENTION' in msg.contentMetadata.keys() != None:
+                 if wait["Mentionkick"] == True:
+                   name = re.findall(r'@(\w+)', msg.text)
+                   mention = ast.literal_eval(msg.contentMetadata['MENTION'])
+                   mentionees = mention['MENTIONEES']
+                   for mention in mentionees:
+                        if mention ['M'] in Bots:
+                           cl.sendMessage(msg.to, "Jangan tag saya....")
+                           cl.kickoutFromGroup(msg.to, [msg._from])
+                           break
+               if msg.contentType == 7:
+                 if wait["sticker"] == True:
+                    msg.contentType = 0
+                    cl.sendMessage(msg.to,"「Cek ID Sticker」\n🐚 STKID : " + msg.contentMetadata["STKID"] + "\n🐚 STKPKGID : " + msg.contentMetadata["STKPKGID"] + "\n🐚 STKVER : " + msg.contentMetadata["STKVER"]+ "\n\n「Link Sticker」" + "\nline://shop/detail/" + msg.contentMetadata["STKPKGID"])
+               if msg.contentType == 13:
+                 if wait["contact"] == True:
+                    msg.contentType = 0
+                    cl.sendMessage(msg.to,msg.contentMetadata["mid"])
+                    if 'displayName' in msg.contentMetadata:
+                        contact = cl.getContact(msg.contentMetadata["mid"])
+                        path = cl.getContact(msg.contentMetadata["mid"]).picturePath
+                        image = 'http://dl.profile.line.naver.jp'+path
+                        cl.sendMessage(msg.to,"⏩ Nama: " + msg.contentMetadata["displayName"] + "\n⏩ MID: " + msg.contentMetadata["mid"] + "\n⏩ Status: " + contact.statusMessage + "\n⏩ Picture URL : http://dl.profile.line-cdn.net/" + contact.pictureStatus)
+                        cl.sendImageWithURL(msg.to, image)
+
         if op.type == 25 or op.type == 26:
             msg = op.message
             text = msg.text
