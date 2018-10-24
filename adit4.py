@@ -359,12 +359,12 @@ def command(text):
 def help():
     key = Setmain["keyCommand"]
     key = key.title()
-    helpMessage = "╭═══════════════════════════" + "\n" + \
-                  "║»»═══════ Aditmadzs ════════" + "\n" + \
-                  "║»══════════════════════════" + "\n" + \
-                  "║»»═════ Help Message ══════" + "\n" + \
-                  "║»══════════════════════════" + "\n" + \
-                  "║»»════════ List Menu ════════" + "\n" + \
+    helpMessage = "╭════════════════" + "\n" + \
+                  "║»» Aditmadzs" + "\n" + \
+                  "║»════════════════" + "\n" + \
+                  "║»» Help Message " + "\n" + \
+                  "║»════════════════" + "\n" + \
+                  "║»» List Menu " + "\n" + \
                   "║»» " + key + "Cctv「on/off」\n" + \
 				  "║»» " + key + "Creator\n" + \
 				  "║»» " + key + "Cyduk\n" + \
@@ -376,9 +376,9 @@ def help():
                   "║»» " + key + "Listbot\n" + \
                   "║»» " + key + "Listadmin\n" + \
 				  "║»» " + key + "Status\n" + \
-				  "║»════════════════════════════" + "\n" + \
-                  "║»══ http://line.me/ti/p/~adit_cmct" + "\n" + \
-                  "╰═════ CREATOR: ©Aditmadzs™"
+				  "║»══════════════" + "\n" + \
+                  "║» http://line.me/ti/p/~adit_cmct" + "\n" + \
+                  "╰═══ CREATOR: ©Aditmadzs™"
     return helpMessage
     
     
@@ -386,12 +386,12 @@ def help():
 def helpcreator():
     key = Setmain["keyCommand"]
     key = key.title()
-    helpMessage1 = "╭═════════════════════════" + "\n" + \
-                  "║»»══════ Aditmadzs ════════" + "\n" + \
-                  "║»═════════════════════════" + "\n" + \
-                  "║»»══════ Help BOT ═══════" + "\n" + \
-                  "║»════════════════════════" + "\n" + \
-                  "║»»══════ List Menu ══════" + "\n" + \
+    helpMessage1 = "╭═════════════" + "\n" + \
+                  "║»» Aditmadzs " + "\n" + \
+                  "║»══════════════" + "\n" + \
+                  "║»» Help BOT " + "\n" + \
+                  "║»══════════════" + "\n" + \
+                  "║»» List Menu " + "\n" + \
                   "║»» " + key + "Cek spam\n" + \
                   "║»» " + key + "Cek pesan\n" + \
                   "║»» " + key + "Cek respon\n" + \
@@ -422,20 +422,20 @@ def helpcreator():
                   "║»» " + key + "Mykey\n" + \
                   "║»» " + key + "Resetkey\n" + \
 				  "║»» " + key + "Self「on/off」\n" + \
-                  "║»═════════════════════════" + "\n" + \
+                  "║»═══════════════" + "\n" + \
                   "║»══ http://line.me/ti/p/~adit_cmct" + "\n" + \
-                  "╰═════ CREATOR: ©Aditmadzs™"
+                  "╰══ CREATOR: ©Aditmadzs™"
     return helpMessage1
 
 def helpblacklist():
     key = Setmain["keyCommand"]
     key = key.title()
-    helpMessage3 = "╭══════════════════════════" + "\n" + \
-                  "║»»═══════ Aditmadzs ════════" + "\n" + \
-                  "║»══════════════════════════" + "\n" + \
-                  "║»»═════ Help Blacklist ══════" + "\n" + \
-                  "║»═════════════════════════" + "\n" + \
-                  "║»»═══════ List Menu ═══════" + "\n" + \
+    helpMessage3 = "╭══════════════" + "\n" + \
+                  "║»» Aditmadzs " + "\n" + \
+                  "║»═══════════════" + "\n" + \
+                  "║»» Help Blacklist " + "\n" + \
+                  "║»═══════════════" + "\n" + \
+                  "║»» List Menu " + "\n" + \
                   "║»» " + key + "Banlist\n" + \
 				  "║»» " + key + "Ban:on\n" + \
                   "║»» " + key + "Blc\n" + \
@@ -443,20 +443,20 @@ def helpblacklist():
 				  "║»» " + key + "Refresh\n" + \
 				  "║»» " + key + "Unban「@」\n" + \
 				  "║»» " + key + "Unban:on\n" + \
-				  "║»══════════════════════════" + "\n" + \
+				  "║»═══════════════" + "\n" + \
                   "║»══ http://line.me/ti/p/~adit_cmct" + "\n" + \
-                  "╰═════ CREATOR: ©Aditmadzs™"
+                  "╰══ CREATOR: ©Aditmadzs™"
     return helpMessage3
 
 def helpadmin():
     key = Setmain["keyCommand"]
     key = key.title()
-    helpMessage4 = "╭══════════════════════════" + "\n" + \
-                  "║»»═══════ Aditmadzs ════════" + "\n" + \
-                  "║»══════════════════════════" + "\n" + \
-                  "║»»═════ Help Admin ══════" + "\n" + \
-                  "║»═════════════════════════" + "\n" + \
-                  "║»»═══════ List Menu ═══════" + "\n" + \
+    helpMessage4 = "╭═══════════════" + "\n" + \
+                  "║»» Aditmadzs " + "\n" + \
+                  "║»═══════════════" + "\n" + \
+                  "║»» Help Admin " + "\n" + \
+                  "║»═══════════════" + "\n" + \
+                  "║»» List Menu " + "\n" + \
                   "║»» " + key + "Admin:on\n" + \
                   "║»» " + key + "Admin:repeat\n" + \
                   "║»» " + key + "Adminadd「@」\n" + \
@@ -470,20 +470,20 @@ def helpadmin():
                   "║»» " + key + "Staff:repeat\n" + \
                   "║»» " + key + "Staffadd「@」\n" + \
                   "║»» " + key + "Staffdell「@」\n" + \
-                  "║»═══════════════════════════" + "\n" + \
+                  "║»════════════════" + "\n" + \
                   "║»══ http://line.me/ti/p/~adit_cmct" + "\n" + \
-                  "╰═════ CREATOR: ©Aditmadzs™"
+                  "╰══ CREATOR: ©Aditmadzs™"
     return helpMessage4
     	
 def helpsetting():
     key = Setmain["keyCommand"]
     key = key.title()
-    helpMessage5 = "╭══════════════════════════" + "\n" + \
-                  "║»»═══════ Aditmadzs ════════" + "\n" + \
-                  "║»══════════════════════════" + "\n" + \
-                  "║»»═════ Help Setting ══════" + "\n" + \
-                  "║»═════════════════════════" + "\n" + \
-                  "║»»═══════ List Menu ═══════" + "\n" + \
+    helpMessage5 = "╭═══════════════" + "\n" + \
+                  "║»» Aditmadzs " + "\n" + \
+                  "║»════════════════" + "\n" + \
+                  "║» Help Setting " + "\n" + \
+                  "║»════════════════" + "\n" + \
+                  "║»» List Menu " + "\n" + \
                   "║»» " + key + "Autoadd「on/off」\n" + \
 				  "║»» " + key + "Autojoin「on/off」\n" + \
 				  "║»» " + key + "Autoleave「on/off」\n" + \
@@ -492,20 +492,20 @@ def helpsetting():
 				  "║»» " + key + "Respon「on/off」\n" + \
 				  "║»» " + key + "Unsend「on/off」\n" + \
                   "║»» " + key + "Welcome「on/off」\n" + \
-                  "║»═══════════════════════════" + "\n" + \
+                  "║»═════════════════" + "\n" + \
                   "║»══ http://line.me/ti/p/~adit_cmct" + "\n" + \
-                  "╰═════ CREATOR: ©Aditmadzs™"
+                  "╰══ CREATOR: ©Aditmadzs™"
     return helpMessage5
     
 def helpprotect():
     key = Setmain["keyCommand"]
     key = key.title()
-    helpMessage6 = "╭══════════════════════════" + "\n" + \
-                  "║»»═══════ Aditmadzs ════════" + "\n" + \
-                  "║»══════════════════════════" + "\n" + \
-                  "║»»═════ Help Protect ══════" + "\n" + \
-                  "║»═════════════════════════" + "\n" + \
-                  "║»»═══════ List Menu ═══════" + "\n" + \
+    helpMessage6 = "╭════════════════" + "\n" + \
+                  "║»» Aditmadzs " + "\n" + \
+                  "║»════════════════" + "\n" + \
+                  "║»» Help Protect " + "\n" + \
+                  "║»═══════════════" + "\n" + \
+                  "║»» List Menu " + "\n" + \
 				  "║»» " + key + "Join dit\n" + \
 				  "║»» " + key + "Ditpro 「on/off」\n" + \
                   "║»» " + key + "Notag「on/off」\n" + \
@@ -514,20 +514,20 @@ def helpprotect():
                   "║»» " + key + "Protectkick「on/off」\n" + \
                   "║»» " + key + "Protectcancel「on/off」\n" + \
                   "║»» " + key + "Protectinvite「on/off」\n" + \
-				  "║»═══════════════════════════" + "\n" + \
+				  "║»════════════════" + "\n" + \
                   "║»══ http://line.me/ti/p/~adit_cmct" + "\n" + \
-                  "╰═════ CREATOR: ©Aditmadzs™"
+                  "╰══ CREATOR: ©Aditmadzs™"
     return helpMessage6
 	
 def helpbot():
     key = Setmain["keyCommand"]
     key = key.title()
-    helpMessage8 = "╭══════════════════════════" + "\n" + \
-                  "║»»═══════ Aditmadzs ════════" + "\n" + \
-                  "║»══════════════════════════" + "\n" + \
-                  "║»»═════ Help BOT ══════" + "\n" + \
-                  "║»═════════════════════════" + "\n" + \
-                  "║»»═══════ List Menu ═══════" + "\n" + \
+    helpMessage8 = "╭════════════════" + "\n" + \
+                  "║»» Aditmadzs " + "\n" + \
+                  "║»════════════════" + "\n" + \
+                  "║»» Help BOT" + "\n" + \
+                  "║»════════════════" + "\n" + \
+                  "║»» List Menu " + "\n" + \
                   "║»» " + key + "About\n" + \
 				  "║»» " + key + "Close\n" + \
 				  "║»» " + key + "Ginfo\n" + \
@@ -550,7 +550,7 @@ def helpbot():
 				  "║»» " + key + "Stealpicture「@」\n" + \
                   "║»» " + key + "Stealvideoprofile「@」\n" + \
                   "║»» " + key + "Tagall\n" + \
-                  "║»══════════════════════════" + "\n" + \
+                  "║»════════════════" + "\n" + \
                   "║»══ http://line.me/ti/p/~adit_cmct" + "\n" + \
                   "╰═════ CREATOR: ©Aditmadzs™"
     return helpMessage8
